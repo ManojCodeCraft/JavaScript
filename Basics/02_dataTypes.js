@@ -13,6 +13,7 @@ let state;
 //null=>standalone value
 //symbol=> unique
 //object
+//ecma and mdn sites for JS
 console.log(typeof "Manoj");
 console.log(typeof age);
 console.log(typeof null);
