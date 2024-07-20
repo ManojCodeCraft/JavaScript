@@ -33,15 +33,15 @@
 //Reference Type/(Non primitive)
 //Array, objects,Functions
 
-const subjects=["Maths","Physics","Chemistry"];
-let myObj={
-    name:"Manoj",
-    age:19,
-}
+// const subjects=["Maths","Physics","Chemistry"];
+// let myObj={
+//     name:"Manoj",
+//     age:19,
+// }
 
-const myFunction=function(){
-    console.log("Hello World");
-}
+// const myFunction=function(){
+//     console.log("Hello World");
+// }
 
 //+++++++++++++++++++++++++++++++++++++
 //Stack(Primitive),Heap(Non-Primitive)
