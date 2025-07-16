@@ -1,0 +1,87 @@
+
+
+
+
+<!-- Vanila VavaScript : 
+Vanilla JavaScript, synonymous with pure or plain JavaScript, eschews external tools like libraries or frameworks. It empowers developers to craft interactive websites solely with JavaScript. While it excels in frontend development, Node.js, a JavaScript framework, is preferred for backend operations. -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Timing Function </h1>
+
+
+
+
+<!-- <button onclick="printName()" >Print Name </button> -->
+  <br>  <br>  <br>  <br>  <br>
+  <!-- <button onclick="intervalFucntion()">Interval </button> -->
+   
+<label for="">Active </label>
+  <input checked type="radio" value="1" name="status" id="active"  placeholder="Active " >
+<label for="">Inactive </label>
+
+
+  <input type="radio" value="2" name="status" id="active" placeholder="InActive "  >
+
+
+
+
+
+
+
+
+  <div id="status"></div>
+    <script>
+
+
+        const printName=()=>{
+            setTimeout(()=>{
+                console.log("My Name is Printing after 2 Second ");
+
+
+            },2000)
+        }
+
+
+
+
+      const active=  document.getElementById("active").value;
+ //active==1?"Active":"Inactive"; -->
+
+
+
+
+       document.write(active?"Active":"Inactive")
+      /// const inactive=  document.getElementById("inactive").value; -->
+      console.log("Active: " + active);
+
+
+     //document.getElementById("status").innerHTML=`${<p>  Status : {active&&"Active"}  {inactive &&"InActive"}</p>}` -->
+        const intervalFucntion=()=>{
+            setInterval(()=>{
+            console.log("Interval Function Called");
+                },2000)
+            }
+
+
+
+
+
+
+
+
+   
+      // Interval  
+       </script>
+</body>
+</html>
+Assignment 
+<!-- Create Program using SetTimeOut
+Create program using setInterval 
+Create program using ? : -->
+

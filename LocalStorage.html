@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+      <h2>Let's Start Local Storage and Cookies </h2>
+    <form action="">
+        <label for=""> Name  </label>
+        <input type="text" id="name">
+         <br>
+        <label for=""> Email</label>
+
+
+        <input type="text" id="email">
+        <br>
+
+
+        <label for=""> Phone </label>
+
+
+        <input type="text" id="phone">
+    </form>
+
+
+      <button onclick="onSubmit()">Submit</button>  <br> <br>
+  <button onclick="clearLocalStorageData()">Clear All Data   </button>
+      <br>   <br>   <br>   <br>
+      <button onclick="printLocalStorageData()">Print Data </button>
+
+
+
+
+      <br>
+      <br>
+      <button onclick="getLength()">Length</button>
+</body>
+    <script>
+             const storeData=()=>{
+                localStorage.setItem("name","abc")
+             }
+
+
+   const onSubmit=()=>{
+    const name =document.getElementById("name").value;
+    const email =document.getElementById("email").value;
+    const phone =document.getElementById("phone").value;
+    const dataObject ={
+        name:name,
+        email:email,
+        phone:phone,
+    };
+
+
+    localStorage.setItem("name",name);
+    localStorage.setItem("email",email);
+    localStorage.setItem("phone",phone);
+
+
+   }
+
+   const printLocalStorageData =()=>{
+    const name =localStorage.getItem("name");
+    const phone =localStorage.getItem("phone");
+    const email =localStorage.getItem("email");
+    const data ={
+        name:name,
+        phone:phone,
+        email:email,
+    };
+    console.log("Local Storage Data",data);
+   }
+
+   const clearLocalStorageData =()=>{
+      //localStorage.removeItem("phone");
+      localStorage.clear();
+   }
+   const getLength =()=>{
+    const data =localStorage.length;
+    console.log("Length: ",data);
+   }
+    </script>
+</html>

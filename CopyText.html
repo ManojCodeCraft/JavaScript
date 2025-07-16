@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+
+<body>
+    <h3>Copy Text </h3>
+    <textarea rows="10" cols="20" id="text">
+        Hello I am Learning JavaScript to become Software Engineer
+    </textarea>
+
+
+    <br>
+    <br>
+    <button onclick="copyText()">Copy Text</button>
+    <br>
+</body>
+<script>
+    const value = document.getElementById("text").value;
+    console.log("Div Value: ", value);
+
+
+    function copyText() {
+        navigator.clipboard.writeText(value).then(() => {
+            alert("Text copied successfully")
+        }).catch(() => {
+            alert("Failed to copy text")
+        }).finally(() => {
+            console.log("Clipboard operation finished")
+        })
+
+
+    }
+
+
+</script>
+
+
+</html>
+

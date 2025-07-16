@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+
+<body>
+
+
+    <div id="s"></div>
+    <h1 id="heading">
+        Let's Start With Function
+    </h1>
+    <!-- <button onclick=""> Change Color </button> -->
+    <form >
+        <label for="">Name</label> <br>
+        <input type="text" id="name"><br>
+        <label for="">Email </label> <br>
+        <input type="email" id="email"> <br>
+        <label for="">Phone</label> <br>
+        <input type="number" id="phone"> <br>
+        <label for="">City</label> <br>
+        <input type="text" id="city"> <br>
+    </form>
+
+
+
+
+    <button onclick="mynewFunction()">Submit</button>
+
+
+    <br>
+    <br>
+    <br>
+    <input type="text" onchange="printMyName()" name="" id="myname">
+
+
+</body>
+<script>
+
+
+    var color = false;
+
+
+    const printMyName = function(){
+        const name=document.getElementById("myname").value;
+     console.log("My name is " ,name);
+   }
+
+
+    //Normal function in javascript
+    function onSubmit(e){
+        const name =document.getElementById("name").value;
+        const email =document.getElementById("email").value;
+        const phone =document.getElementById("phone").value;
+        const city =document.getElementById("city").value;
+        const dataObject ={
+          name:name,
+          email:email,
+          phone:phone,
+          city:city,
+        }
+        console.log("Form Data Value ",dataObject);
+    }
+
+
+
+
+// Arrow Function in javaScript
+
+
+   const  mynewFunction=()=>{
+    const name =document.getElementById("name").value;
+    const email =document.getElementById("email").value;
+    const phone =document.getElementById("phone").value;
+    const city =document.getElementById("city").value;
+    const dataObject ={
+      name:name,
+      email:email,
+      phone:phone,
+      city:city,
+    }
+    console.log("Form Data Value ",dataObject);
+   }
+
+
+    function myFunction() {
+        if (!color) {
+            document.body.style.backgroundColor = "green";
+            document.getElementById("heading").style.color = "black";
+            color = true;
+        }
+        else {
+            document.body.style.backgroundColor = "red";
+            document.getElementById("heading").style.color = "white";
+            color = false;
+        }
+        console.log("Button is Cliked ");
+    }
+</script>
+
+
+</html>

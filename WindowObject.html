@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button onclick="printOrigin()">Click Me</button>
+    <script>
+         const Refresh = ()=>{
+            window.location.reload();
+        }
+        const printOrigin =()=>{
+            console.log("My Current Origin  : ",window.location.href);
+            console.log("My Current Window Width   : ",window.screen.width);
+            console.log("My Current Window Height   : ",window.screen.height);
+            console.log("My Current Window X Axis   : ",window.screenX);
+            console.log("My Current Window Y Axis    : ",window.screenY);
+            console.log("My Current Pathname   : ",window.location.pathname);
+             console.log("My Current Host   : ",window.location.host);
+            console.log("My Current Hostname   : ",window.location.hostname);
+        }
+    </script>
+</body>
+</html>

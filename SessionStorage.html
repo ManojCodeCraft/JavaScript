@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form >
+        <label for="">Name</label> <br>
+        <input type="text" id="name"><br>
+        <label for="">Email </label> <br>
+        <input type="email" id="email"> <br>
+        <label for="">Phone</label> <br>
+        <input type="number" id="phone"> <br>
+        <label for="">City</label> <br>
+        <input type="text" id="city"> <br>
+        <button onclick="getData()">submit</button>
+    </form>
+    <script>
+        function onSubmit(e){
+            const name =document.getElementById("name").value;
+            const email =document.getElementById("email").value;
+            const phone =document.getElementById("phone").value;
+            const city =document.getElementById("city").value;
+            const dataObject ={
+              name:name,
+              email:email,
+              phone:phone,
+              city:city,
+            }
+            window.sessionStorage.setItem("key","value")
+            window.sessionStorage.setItem("name",name)
+            window.sessionStorage.setItem("email",email)
+            window.sessionStorage.setItem("phone",phone)
+            window.sessionStorage.setItem("city",city)
+        }
+        function getData() {
+            const name =window.sessionStorage.getItem("name");
+            const email =window.sessionStorage.getItem("email");
+            const phone =window.sessionStorage.getItem("phone");
+            const city =window.sessionStorage.getItem("city");
+            console.log("All Sesss data",{name,phone,city,email});
+        }
+        function clearSessionData(){
+            window.sessionStorage.removeItem("name")
+        }
+        function clearSession(){
+            window.sessionStorage.clear();
+            window.location.reload();
+        }
+        function SessionFunction(){
+            const data=window.sessionStorage.length;
+            console.log("Length: " ,data);
+        }
+        function openFacebook(){
+            window.location.href="https://www.facebook.com/"
+            window.open("https://www.facebook.com/","_blank");
+        }
+// 1. Explore More Windows  object
+// 2. Make Program Using Window Object
+// 3. Make Program Using Session Storage
+// 4. Store Form Data in Session Storage
+// 5. Research About Local Storage and Cookies
+    </script>
+</body>
+</html>

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h3> Cookies </h3>
+
+
+    <button onclick="storeCookies()"> Store Cookies</button>
+
+
+    <br> <br>
+    <button onclick="printData()">Get Data </button>
+
+
+</body>
+<script>
+    const storeCookies=()=>{
+        document.cookie="name"+"="+"This is JavaScript";
+        document.cookie="email"+"="+"Javascript Email";
+    }
+    const printData =()=>{
+        console.log("Cookies Data : ",document.cookie);
+    }
+
+</script>
+</html>
+<!-- 1. Create 5 Program to Store Data in Local Storage
+2. Create 5 Program to Store Data in Cookies
+3. Create 5 Program to Get Data in Cookies
+4. Create 5 Program to Get Data in Localstorage
+5. Create 5 Program to Remove Data from Cookies and Localstorage
+6. Explore any 10 methods of String in JavaScript -->

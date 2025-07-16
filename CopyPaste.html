@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+
+<body>
+
+
+    <h3>Let's Start Copy and Past </h3>
+
+
+    <div style=" display:flex;width:100vw; justify-content:center; align-items:center">
+        <div>
+            <h3>Copy Input Box </h3>
+            <textarea rows="20" onchange="getLength()" style="margin: 10px;" cols="50" name="" id="copy">
+        </textarea>
+        </div>
+        <div>
+            <h3>Past Input Box</h3>
+            <textarea rows="20" style="margin: 10px;" cols="50" name="" id="past">
+     </textarea>
+        </div>
+    </div>
+    <h4>  Current String Length </h4>  <p id="length">  </p>
+    <div>
+        <button onclick="copyText()" style="margin:0,10px; background-color: rgba(7, 177, 244, 0.333); cursor:pointer;">
+            Copy
+            Text</button>
+        <button onclick="pastText()" style="margin:0,10px; background-color: rgba(7, 244, 102, 0.333); cursor:pointer;">
+            Past
+            Text</button>
+        <button onclick="cleartextCopyInput()" style="margin:0,10px; background-color: red; cursor:pointer;"> Clear Copy
+        </button>
+        <button onclick="cleartextPastInput()" style="margin:0,10px; background-color: red; cursor:pointer;"> Clear
+            Past</button>
+    </div>
+</body>
+
+
+<script>
+   function getLength(){
+       const value =document.getElementById("copy").value;
+       console.log("Current String : ",  value.length);
+       document.getElementById("length").innerText = value.length;
+   }
+    function copyText() {
+        const value = document.getElementById("copy").value;
+        navigator.clipboard.writeText(value).then(() => {
+            alert("Text copied successfully")
+        }).catch(() => {
+            alert("Failed to copy text")
+        }).finally(() => {
+            console.log("Clipboard operation finished")
+        })
+
+
+    }
+    function cleartextPastInput() {
+        document.getElementById("past").innerText = "";
+    }
+    function cleartextCopyInput() {
+        document.getElementById("copy").value = "";
+    }
+    function pastText() {
+        navigator.clipboard.readText().then((text) => {
+            document.getElementById("past").innerText = text;
+            alert("Text pasted successfully")
+        }).catch((error) => {
+            alert(error.message)
+
+
+        }).finally(() => {
+            console.log("Clipboard operation finished")
+        })
+    }
+</script>
+
+
+</html>
+
+
+<!-- Assignment 
+
+Create Copy Past Project  Which Allow Me this all Operation 
+User Can Copy The Text 
+User Can Past the Text 
+User Can Clear the Text 
+User Can See Count of Alphabets 
+Get count of Wor
+d  -->
